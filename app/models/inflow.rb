@@ -1,0 +1,3 @@
+class Inflow < Meter
+
+end

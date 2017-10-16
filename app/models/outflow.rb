@@ -1,0 +1,3 @@
+class Outflow < Meter
+
+end

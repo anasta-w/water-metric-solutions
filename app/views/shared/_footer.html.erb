@@ -1,0 +1,9 @@
+<footer class="page-footer">
+  <div class="container">
+    <%if logged_in?%>
+      <%= render 'shared/footer/logged_in_footer'%>
+    <%else%>
+      <%= render 'shared/footer/logged_out_footer'%>
+    <%end%>
+  </div>
+</footer>

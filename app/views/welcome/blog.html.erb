@@ -1,0 +1,72 @@
+<div class="row">
+  <h2 style="text-align:center">Blog</h2>
+</div>
+
+<div class="row">
+
+  <%@content.each_with_index do |blog_post, index|%>
+  <%= render 'welcome/blog_post', locals: {title: "#{blog_post["title"]}", content: "#{blog_post["content"]}", image: "#{@images[index]}"}%>
+  <%end%>
+</div>
+
+<!-- Place in scss file -->
+<style media="screen">
+
+  .blog-post {
+    height: 150px;
+    min-width: 700px;
+    border: 1px solid black;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .blog-post li {
+    float: left;
+  }
+
+  .image-container {
+    margin-left: 10px;
+    margin-top: 15px;
+  }
+
+  .image-container img {
+    height: 120px;
+    width: 150px;
+    display: block;
+  }
+
+  .content-container {
+    position: relative;
+    height: 100%;
+    width: 75%;
+    display: block;
+  }
+
+  .blog-title {
+    position: absolute;
+    padding-left: 20px;
+    z-index: 1;
+  }
+
+  .blog-title a {
+    display: block;
+  }
+
+  .blog-main {
+    position: absolute;
+    padding-top: 55px;
+    padding-left: 20px;
+    height: 100%;
+    width:100%;
+    word-wrap: break-word;
+    display: inline-block;
+    margin-bottom: 0;
+    margin-top: 0;
+
+    /* Buggy */
+    overflow:hidden;
+    text-overflow: ellipsis;
+    /* ^^^ */
+  }
+
+</style>

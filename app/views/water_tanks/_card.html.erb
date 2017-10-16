@@ -1,0 +1,21 @@
+<div class="col s12 m12 l4">
+  <div class="card large darken-2 sticky-action">
+    <div class="card-content" style="">
+        <div class="tankChart" id="water-tank<%=locals[:index]%>"></div>
+
+        <span class="card-title activator text-darken-4" style=""><%=locals[:tank].name%></span>
+        <span id="water-tank-data" class="card-title activator grey-text text-darken-4"></span><br>
+      Last Reading: <span id="water-tank-lastReading<%=locals[:index]%>"></span><br>
+      Status: <span id="water-tank-status<%=locals[:index]%>"></span>
+    </div>
+
+    <div class="card-reveal grey lighten-3" >
+      <span class="card-title grey-text text-darken-4">Close<i class="fa fa-times right"></i></span>
+    </div>
+
+    <div class="card-action" style="background: lightgrey;">
+      <span style="color: #E2E3D4;"><%=link_to "See More", water_tank_path(locals[:tank])%></span>
+    </div>
+
+  </div>
+</div>

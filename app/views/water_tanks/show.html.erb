@@ -1,0 +1,46 @@
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-xs-12 col-md-offset-0">
+      <div class="center-align chartTitle"><%=@water_tank.name%><span><%=link_to edit_water_tank_path do%><i class="material-icons editButton" style="color: grey;"><span class="editButton">mode_edit</span></i><%end%></span></div>
+    </div>
+
+    <div class="row">
+      <div class="col s12 m6 l6 center-align">
+            <div class="chartDetailsTitle">Capacity:</div>
+            <div class="chartDetails"><%=@water_tank.capacity%>L</div>
+      </div>
+      <div class="col s12 m6 l6 center-align">
+            <div class="chartDetailsTitle">Height:</div>
+            <div class="chartDetails"><%=@water_tank.height%>m</div>
+      </div>
+    </div>
+  </br>
+  <!-- Chart -->
+  <div class="row">
+    <div id="chart"></div>
+  </div>
+
+    </div>
+
+    </br>
+    <%=button_to(water_tank_path(@water_tank), :method => 'delete', :class => "deleteButton") do%><i class="material-icons" style="font-size: 30px; color: red;"><span class="delete-button">delete</span></i><%end%>
+
+    <h3 class="alertsTitle">
+      Alerts
+    </h3>
+    <%=link_to new_water_tank_alert_path(@water_tank) do%>
+      <input class="btn btn-default newAlertButton" type="submit" value="Add New Alert">
+    <%end%>
+    <% if @water_tank.alerts%>
+      <%@water_tank.alerts.each do |alert|%>
+          <%= render 'alerts/partials/card', locals: {alert: alert} %>
+      <%end%>
+    <%end%>
+
+
+  </div>
+
+
+</div>

@@ -1,0 +1,31 @@
+
+
+<div class="container">
+  <div class="row">
+    <h3>Add Farm Block</h3>
+    <%=form_for [@user, @farm_block] do |f|%>
+    <div class="input-group input-group-lg">
+      <%=f.label :name%>
+      <%=f.text_field :name, class: "form-control"%>
+    </div>
+
+    <%= fields_for :location, @farm_block.location do |loc|%>
+    <%= loc.label :longitude%>
+    <%= loc.text_field :longitude%>
+
+    <%= loc.label :latitude%>
+    <%= loc.text_field :latitude%>
+
+    <%= loc.label :address%>
+    <%= loc.text_field :address%>
+    <%end%>
+
+    <div class="input-group input-group-lg">
+      <%=f.submit "Add Farm Block", class:"btn btn-primary" do%>
+        <input type="submit">
+      <%end%>
+    </div>
+
+    <%end%>
+  </div>
+</div>

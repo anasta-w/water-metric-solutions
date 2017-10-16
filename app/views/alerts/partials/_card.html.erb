@@ -1,0 +1,11 @@
+<div class="col s12 m5">
+  <div class="card-panel grey darken-4">
+    <span class="white-text">
+      <%=locals[:alert].condition%>
+    </span>
+    <%=link_to [@inflow_meter, locals[:alert]], :method => 'delete', :class => "deleteButton" do%>
+    <i class="material-icons" style="font-size: 30px; color: red;"><span class="delete-button">delete</span></i>
+    <%end%>
+
+  </div>
+</div>

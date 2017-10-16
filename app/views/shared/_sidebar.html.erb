@@ -1,0 +1,41 @@
+<ul class="side-nav" id="slide-out" style="background: #F2F2F2;">
+    <li class="logo">
+      <%=link_to root_path do%>
+        <div class="side-title"><span style="color: white;">Knode</span><span style="color: #ECBE13;">.</span></div>
+      <%end%>
+    </li>
+    <li class="bold">
+      <strong>
+        <div class="side-nav-farm">
+          <%if logged_in?%>
+            <%=link_to "Dashboard", dashboard_path(current_user)%>
+          <%end%>
+        </div>
+      </strong>
+    </li>
+
+    <%if logged_in?%>
+    <%current_user.farm_blocks.each do |fb|%>
+    <strong>
+      <div class="side-nav-farm">
+        <li><%=link_to fb.name, farm_block_path(fb)%></li>
+      </div>
+    </strong>
+    <div class="navSubTitle">Water Tanks</div>
+    <li><div class="divider"></div></li>
+    <div class="side-nav-farm">
+      <%fb.water_tanks.each do |wt|%>
+        <li><%=link_to wt.name, water_tank_path(wt), {class: "subheader"}%></li>
+      <%end%>
+    </div>
+    <div class="navSubTitle">Inflow Meters</div>
+    <li><div class="divider"></div></li>
+    <div class="side-nav-farm">
+      <%fb.inflow_meters.each do |inflmt|%>
+        <li><%=link_to inflmt.name, inflow_meter_path(inflmt), {class: "subheader"}%></li>
+      <%end%>
+    </div>
+    <%end%>
+
+    <%end%>
+</ul>

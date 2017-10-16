@@ -1,0 +1,25 @@
+// # Place all the behaviors and hooks related to the matching controller here.
+// # All this logic will automatically be available in application.js.
+// # You can use CoffeeScript in this file: http://coffeescript.org/
+
+$(document).ready(function(){
+  $('select').material_select();
+});
+
+
+function getAllAlerts () {
+
+  var requestOptions = {
+    url: '/get_all_alerts',
+    method: 'GET',
+    dataType: 'json'
+  };
+
+  $.ajax(requestOptions).done(function(resp) {
+    console.log(resp);
+  }).fail(function(err){
+    console.error(err);
+  });
+
+}
+;

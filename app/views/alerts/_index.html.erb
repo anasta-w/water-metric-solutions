@@ -1,0 +1,15 @@
+
+<ul class="col-md-8">
+  <%@alerts.each do |alert|%>
+  <li><h5>Condition: <%=alert.condition%></h5></li>
+  <li>Value: <%=alert.value%></li>
+  <li>
+    <%=link_to edit_polymorphic_path(alert) do%>
+    Edit This Alert
+    <%end%>
+  </li>
+  <li>
+    <%=button_to('Delete', alert_path(alert), class:"btn btn-default", :method => 'delete')%>
+  </li>
+  <%end%>
+</ul>

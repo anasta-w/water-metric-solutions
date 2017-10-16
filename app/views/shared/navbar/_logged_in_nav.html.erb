@@ -1,0 +1,99 @@
+<ul class="nav left">
+  <li style="padding-left: 0px;">
+    <a data-activates="slide-out" class="show-on-large button-collapse">
+      <i class="large material-icons">view_module</i>
+    </a>
+  </li>
+</ul>
+
+<ul class="nav center">
+  <li class="nav-logo">
+    <!-- <%#if current_page?("controller"=>"farm_blocks", "action"=>"index", "user_id"=> current_user.id)%> -->
+      Knode<span style="color: orange;">.</span></a>
+    <!-- <%#elsif current_page?("controller"=>"farm_blocks", "action"=>"show")%>
+      <%#currentFarmBlock = @farm_block.name%>
+      <span style="">
+        <li>
+          <%#= currentFarmBlock%>
+          <%#=link_to edit_farm_block_path(current_user) do%>
+              <span class="material-icons" style="font-size: 1.5em; color: white;">mode_edit</span>
+          <%#end%>
+        </li>
+      </span>
+    <%#else%>
+      <span style="">
+        <li>
+          <%#= currentFarmBlock%>
+          <%#=link_to edit_farm_block_path(current_user) do%>
+              <span class="material-icons" style="font-size: 1.5em; color: white;">mode_edit</span>
+          <%#end%>
+        </li>
+      </span>
+    <%#end%> -->
+  </li>
+</ul>
+
+<ul class="nav-mobile nav right" id="nav-mobile">
+  <li><a class="dropdown-button" href="#!" data-activates="dropdown2" data-beloworigin="true"><span class="noficicationImage" id="notif"><%=image_tag("notificationBadge.png", class:"notification")%></span></i></a></li>
+  <li><%=link_to "#{current_user.first_name.capitalize} #{current_user.last_name.capitalize}", user_path(current_user)%></li>
+  <li><%=link_to "Logout", logout_path%></li>
+</ul>
+
+<ul id="dropdown2" class="dropdown-content">
+  <div class="alertTitle"><strong>Alerts</strong></div>
+  <div class="alertContent" id="noAlerts"></div>
+  <div id="alertList">
+    <%get_device_count.each_with_index do |alert, i|%>
+      <div id="alert<%=i%>">
+        <li>
+          <div class="alertContent" id="alertDiv" style="word-wrap: break-word;">
+            <div class="alertClose"><input class="alertBtnClose" type="button" value="x" id="b<%=i%>" onclick="delete<%=i%>();checkNotif()"/></div>
+            <strong><%=alert[:name]%></strong>
+            <br>
+          </div>
+          Volume <%=alert[:type]%> <%=alert[:data]%>
+        </li>
+      </div>
+      <script>
+        function delete<%=i%>() {
+            var b<%=i%> = document.getElementById('b<%=i%>');
+
+            if(b<%=i%>.onclick="delete<%=i%>();") {
+              document.getElementById('alert<%=i%>').innerHTML = "";
+              checkNotif();
+            }
+        }
+      </script>
+    <%end%>
+  </div>
+</ul>
+
+<script type="text/javascript">
+  $.ajax({
+    url:"/get_all_alerts",
+  }, function (data) {
+
+    debugger
+  })
+</script>
+
+<script type="text/javascript">
+  function checkNotif() {
+    if(document.getElementById('alertList').innerHTML.indexOf("alertContent") != -1) {
+      document.getElementById('notif').innerHTML = '<%=image_tag("notificationBadge.png", class:"notification")%>';
+    }
+    else {
+      document.getElementById('notif').innerHTML = '<%=image_tag("notification.png", class:"notification")%>';
+      document.getElementById('noAlerts').innerHTML = '<li><strong><center><p>No Alerts</p></center></strong></li>';
+    }
+  }
+  function changeText() {
+      var b1 = document.getElementById('b1');
+
+      if(b1.onclick="changeText();") {
+        document.getElementById('alert0').innerHTML = "";
+        checkNotif();
+      }
+  }
+  checkNotif();
+</script>

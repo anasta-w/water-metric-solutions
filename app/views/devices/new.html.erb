@@ -1,0 +1,29 @@
+<div class="container">
+
+  <div class="row center">
+    <h2>device register</h2>
+
+  </div>
+  <div class="row">
+    <div class=""class="form">
+
+        <fieldset>
+          <legend>请输入用户信息</legend>
+             <%= form_tag  do %>
+
+
+            <p>
+              Manufacturer ID: <%= text_field_tag :name, params[:name], :size => 30      %>
+            </p>
+
+
+            <p>
+                        description: <%= text_field_tag :description, params[:description], :size => 30      %>
+            </p>
+
+             <%= submit_tag "注册", :class => "submit" %>
+          <% end %>
+        </fieldset>
+    </div>
+  </div>
+</div>

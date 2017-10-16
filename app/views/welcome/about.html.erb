@@ -1,0 +1,132 @@
+<div class="row">
+  <h2 style="text-align:center;">About Us</h2>
+</div>
+
+<div class="row">
+  <div class="col s12 m10 offset-m1 l8 offset-l2">
+
+    <div style="padding:10px; border: 1px solid #9facbd; border-radius: 2px; margin-top:10px; margin-bottom:10px; overflow:hidden; height:200px;">
+
+      <%= image_tag 'water-icons/png/bucket.png', class:"responsive-img", style:"filter: grayscale(80%); max-width:300px; max-height: 170px; margin-left: 30px;"%>
+
+      <div class="about-us content-wide">
+
+        <h4 style="text-align:center; color:#ff9800">Who We Are</h4>
+
+        <p class="paragraph">
+          Farmers by trade, we know and have experienced first-hand the horrors of losing large and vast quantities of water through unfortunate and costly leakages.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col s12 m10 offset-m1 l8 offset-l2">
+
+    <div style="padding:10px; border: 1px solid #9facbd; border-radius: 2px; overflow:auto; margin-top:10px; margin-bottom:10px; height:200px;">
+
+      <div class="about-us content-wide">
+
+        <h4 style="text-align:center; color:#ff9800">What We Do</h4>
+
+        <p class="paragraph">
+          Currently there is no way to effiently check and manage water supplies across large heactares of property other than to manually drive out to location and investigate your water tanks directly.
+          <!-- If you suspect water may be gushing from your tank, you have no objective way to check.  -->
+          Our platform hopes to give clarity to farmers so they can act quickly and effectively.
+        </p>
+
+      </div>
+
+      <%= image_tag 'water-icons/png/water-4.png', class:"responsive-img", style:"filter: grayscale(80%); diplay:inline-block; float:right; max-width:300px; max-height: 170px; margin-right: 30px;"%>
+    </div>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s12 m10 offset-m1 l8 offset-l2">
+
+    <div style="padding:10px; border: 1px solid #9facbd; border-radius: 2px; margin-top:10px; overflow:auto; height:200px;">
+
+      <%= image_tag 'water-icons/png/piggy-bank.png', class:"responsive-img", style:"filter: grayscale(80%); max-width:300px; max-height: 170px; margin-left:30px;"%>
+
+      <div class="about-us content-wide">
+
+        <h4 style="text-align:center; color: #ff9800">Our Aim</h4>
+
+        <p class="paragraph" >
+          Here at Knode Ltd. we have set out to revolutionise the way farmers oversee their water supplies. Implementing emerging IoT technologies and utilising the pure power and speed of the cloud, we ernestly believe we have built and refined a fault-tolerant platform that will benefit those that use it.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<br><br><br>
+
+<style media="screen">
+
+  .about-us {
+
+  }
+
+  .content-wide {
+    margin-left: 20px;
+    display:inline-block;
+    position:absolute;
+    width:40%;
+  }
+
+  .content-mobile {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+</style>
+
+<script type="text/javascript">
+  var $window = $(window);
+
+   $window.resize(function() {
+     var aboutUs = $(".about-us");
+
+     if ($window.width() < 850) {
+       var images = $(".responsive-img");
+
+       $(".paragraph").css("font-size", "");
+       $(".paragraph").css("font-size", "1em");
+
+       for (var i = 0; i < images.length; i++) {
+         $(images[i]).css("display","none");
+         $(aboutUs[i]).removeClass("content-wide");
+         $(aboutUs[i]).addClass("content-mobile");
+       }
+    }
+
+    if ($window.width() > 850) {
+      var images = $(".responsive-img");
+
+      $(".paragraph").css("font-size", "");
+      $(".paragraph").css("font-size", "0.9em");
+
+      for (var i = 0; i < images.length; i++) {
+        $(images[i]).css("display", "");
+        $(images[i]).css("display", "absolute");
+
+        if ($(aboutUs[i]).hasClass("content-mobile")) {
+          $(aboutUs[i]).removeClass("content-mobile");
+        }
+        $(aboutUs[i]).addClass("content-wide");
+      }
+   }
+  })
+</script>

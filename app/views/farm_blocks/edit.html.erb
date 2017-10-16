@@ -1,0 +1,31 @@
+
+<div class="container">
+  <div class="row">
+    <h3>Edit Farm Block</h3>
+
+    <%=form_for [@user, @farm_block] do |f|%>
+    <div class="input-group input-group-lg">
+      <%=f.label :name%>
+      <%=f.text_field :name, class: "form-control"%>
+    </div>
+
+    <div class="input-group input-group-lg">
+      <%=f.label :location%>
+      <%=f.text_field :location, class: "form-control"%>
+    </div>
+
+    <div class="input-group input-group-lg">
+      <%=f.label :location%>
+      <%=f.text_field :location, class: "form-control"%>
+    </div>
+
+    <%=f.submit "Edit Farm Block", class:"btn btn-primary" do%>
+      <input type="submit">
+    <%end%>
+    <%end%>
+  </br>
+    <%=link_to farm_block_path(@farm_block), method: "delete" do%>
+      <div class="btn red"><i class="fa fa-trash"></i>  Delete Farm Block</div>
+    <%end%>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div class="container">
+  <div class="" style="text-align: left; color: black;">
+  </br>
+
+  </div>
+
+  <div class="row">
+    <div class="col m12 l10">
+
+      <div class="row">
+        <div class="col l6">
+          <div class="sub-header">
+            Water Tanks
+            <%=link_to new_farm_block_water_tank_path(@farm_block), class: "btn-floating btn-medium waves-effect waves-light", style:"background: orange;" do%>
+              <div class="add-button">+</div>
+            <%end%>
+          </div>
+        </div>
+      </div>
+
+    <%if @farm_block.has_water_tanks?%>
+      <%@water_tanks.each_with_index do |wt, index|%>
+        <%= render 'water_tanks/card', collection: @users, locals: {tank: wt, index: index} %>
+        <%end%>
+    <%else%>
+      <h6>No Water Tanks</h6>
+    <%end%>
+
+  </div>
+    </div>
+
+    <div class="row">
+
+    <div class="col m12 l10">
+
+      <div class="row">
+        <div class="col l6">
+          <div class="sub-header">
+            Meters
+            <%=link_to new_farm_block_inflow_meter_path(@farm_block), class: "btn-floating btn-medium waves-effect waves-light", style:"background: orange;" do%>
+              <div class="add-button">+</div>
+            <%end%>
+          </div>
+        </div>
+      </div>
+
+      <%if @farm_block.has_inflow_meters?%>
+        <%@farm_block.inflow_meters.each_with_index do |mt, index|%>
+          <%= render 'inflow_meters/card', locals: {meter: mt, index: index}%>
+      <%end%>
+
+      <%else%>
+      <div>
+        <h6>No Inflow Meters</h6>
+      </div>
+      <%end%>
+    </div>
+  </div>
+
+
+  <!-- <div class="row">
+    <div class="col l10 s12 m12">
+        <div id="map" style="width:1000px; height:400px;"></div>
+    </div>
+  </div> -->
+
+</div>

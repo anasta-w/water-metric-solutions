@@ -1,0 +1,757 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ */
+@import "materialize/components/color";
+@import "materialize/extras/nouislider";
+
+$primary-color: #2A3435 !default;
+@import "materialize";
+
+.nav-logo{
+  font-size: 1em;
+}
+.row {
+  margin-bottom: 0px;
+}
+#chart {
+  max-height: 30rem;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background: #F2F2F2;
+}
+
+main {
+    flex: 1 0 auto;
+}
+.divider {
+  background-color: #474747;
+}
+.breadcrumb {
+    font-size: 1em;
+    background-color: #545959;
+    box-shadow: none;
+    box-sizing: content-box;
+}
+.card-content{
+  margin: auto;
+  min-height: 100%;
+  max-height: 100%;
+}
+footer.page-footer {
+    margin-top: 5rem;
+}
+#wrapper {
+	min-height:100%;
+	position:relative;
+}
+.new_water_tank {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.new_inflow_meter {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.navbar-content {
+  font-size: 1rem;
+}
+.panel-title {
+  font-size: 2rem;
+}
+.parallax {
+  opacity: 0.7;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  width: 100%;
+}
+.parallax-container {
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    padding-bottom: 5rem;
+}
+.nav-title {
+  font-size: 3rem;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.header1 {
+  font-size: 6rem;
+
+}
+.header2 {
+  font-size: 3rem;
+}
+.subheader-index {
+  font-size: 2rem;
+}
+.condensed-light {
+  font-size: 1.25rem;
+}
+.tankChart {
+    height: 20rem;
+    width: 100%;
+    position: relative;
+    top: 0%;
+}
+.inflowChart {
+    height: 20rem;
+    width: 100%;
+    position: relative;
+    top: 0%;
+}
+.page-header {
+  font-size: 5rem;
+}
+.sub-header {
+  font-size: 3rem;
+  opacity: 80%;
+}
+.fbName {
+  font-size: 2rem;
+}
+.enterFarm {
+  font-size: 1.5rem;
+}
+.side-nav {
+  width: 20%;
+}
+.logo {
+  height: 7.5vw;
+  background: #2A3435;
+}
+.side-title {
+  //line-height: 7vw;
+  font-size: 3vw;
+}
+.side-nav a {
+    color: #F2F2F2;
+    display: block;
+    height: auto;
+    line-height: 4vw;
+    font-size: 2.5vw;
+    padding: 0 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.side-nav-farm a {
+    color: #545959;
+    display: block;
+    //height: 4vw;
+    padding: 0 30px;
+    background: #F2F2F2;
+}
+.side-nav-farm a:hover {
+    background: #d9d9d9;
+}
+.side-nav-dash a {
+    color: #F2F2F2;
+    display: block;
+    height: 64px;
+    line-height: 64px;
+    padding: 0 30px;
+}
+.navSubTitle {
+    color: #474747;
+    opacity: 0.5;
+    display: block;
+    height: 3vw;
+    line-height: 3vw;
+    font-size: 1.5vw;
+    padding: 0 30px;
+}
+.chartDetailsTitle {
+  font-size: 3rem;
+  font-weight: 500;
+}
+.chartDetails {
+  font-size: 2rem;
+}
+.chartTitle {
+  font-size: 5rem;
+  font-weight: 500;
+}
+.deleteButton {
+  border: none;
+  background: none;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 999; /* Sit on top */
+    left: 0;
+    top: 0;
+    bottom: 0;
+    min-width: 100%; /* Full width */
+    min-height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content/Box */
+.modal-content {
+    z-index: 999;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 0px;
+    border: 1px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.backgroundBlur {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+
+/* Modal Content/Box */
+.modal-content {
+    z-index: 999;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 0px;
+    border: 1px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.landingBackground {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+.landingForm {
+  width: 25%;
+  height: 100%;
+  position: fixed;
+  left: 37.5%;
+  top: 30%;
+  z-index: 999;
+}
+.form {
+  background: white;
+}
+.add-button {
+  font-weight: 300;
+  line-height: 2.5rem;
+  text-align: center;
+  font-size: 3rem !important;
+}
+.zoomBtn {
+  font-size: 1rem !important;
+}
+.alertContent {
+  width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
+  float: left;
+  font-size: 1.5rem !important;
+  line-height: 2.25rem;
+}
+.alertClose {
+  float: right;
+}
+.alertBtnClose {
+  height: 100%;
+  border: none;
+  background: none;
+}
+.alertTitle {
+  text-align: center;
+  line-height: 2.25rem;
+  color: orange;
+  background-color: #2A3435;
+  font-size: 2rem;
+}
+.notification {
+  z-index: 1;
+  width: 2rem;
+  margin-bottom: -0.7rem;
+}
+span.badge {
+  z-index: 999;
+  color: white;
+}
+.notificationBadgeBackground {
+  z-index: 998;
+  width: 1rem;
+  height: 1rem;
+  background: orange;
+  -moz-border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  border-radius: 1rem;
+}
+.dropdown-content {
+  background-color: #F2F2F2;
+  margin: 0;
+  display: none;
+  min-width: 300px; /* Changed this to accomodate content width */
+  max-height: auto;
+	margin-left: -1px; /* Add this to keep dropdown in line with edge of navbar */
+  overflow: hidden;
+  opacity: 0;
+  position: absolute;
+  //white-space: nowrap;
+  z-index: 1;
+  will-change: width, height;
+}
+.breakWord {
+  width: inherit;
+  overflow-wrap: break-word;
+}
+.primary-content {
+  float: left;
+}
+.account-title {
+  font-size: 5rem;
+}
+.collection {
+}
+.collection-item {
+  height: 2.5rem;
+  line-height: 1.25rem !important;
+}
+.wrap {
+  word-wrap: break-word;
+}
+
+//MOBILE RESPONSIVE
+@media only screen and (max-device-width: 480px){
+  //SIDE NAV
+  body {
+    column-width: 80%;
+  }
+  .landingForm {
+    width: 85%;
+    height: 100%;
+    position: fixed;
+    left: 7.5%;
+    z-index: 999;
+  }
+  .side-nav {
+    width: 80%;
+  }
+  .logo {
+    height: 15rem;
+    background: #2A3435;
+  }
+  .side-title {
+    line-height: 15rem;
+    font-size: 10rem;
+  }
+  .side-nav a {
+      color: #F2F2F2;
+      display: block;
+      height: 10rem;
+      line-height: 10rem;
+      font-size: 5rem;
+      padding: 0 30px;
+  }
+  .side-nav-farm a {
+      color: #545959;
+      display: block;
+      height: 10rem;
+      padding: 0 30px;
+      background: #F2F2F2;
+  }
+  .side-nav-farm a:hover {
+      background: #d9d9d9;
+  }
+  .side-nav-dash a {
+      color: #F2F2F2;
+      display: block;
+      height: 64px;
+      line-height: 64px;
+      padding: 0 30px;
+  }
+  .navSubTitle {
+      color: #474747;
+      opacity: 0.5;
+      display: block;
+      height: 5rem;
+      line-height: 2.5rem;
+      font-size: 2.5rem;
+      padding: 0 30px;
+  }
+  //
+  //TOP NAV
+  .nav-title {
+    font-size: 6rem;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .navbar-content {
+    font-size: 1rem;
+  }
+  .top-nav {
+    height: 10rem;
+    line-height: 10rem;
+    font-size: 4rem;
+  }
+  nav ul a {
+    font-size: 3rem;
+    line-height: 3rem;
+    color: #fff;
+    display: inline-block;
+    padding: 0 15px;
+    cursor: pointer;
+  }
+  nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+    line-height: 10rem;
+  }
+  nav .button-collapse i {
+    font-size: 4rem;
+  }
+  //
+  //CARDS
+  .details {
+    font-size: 20rem;
+  }
+  //
+  //LOGIN
+  .panel-title {
+    font-size: 8rem;
+  }
+  .form-group {
+    font-size: 6rem;
+  }
+  .form-control {
+    font-size: 6rem;
+  }
+  //
+  //FORMS
+  label {
+    font-size: 4rem;
+  }
+  input[type="email"]{
+    font-size: 4rem;
+    height: 5rem;
+  }
+  input[type="password"]{
+    font-size: 4rem;
+    height: 5rem;
+  }
+  input[type="text"]{
+    font-size: 4rem;
+    height: 5rem;
+  }
+  input[type="checkbox"] + label{
+    font-size: 3rem;
+    height: 4rem;
+  }
+  .btn, .btn-large {
+    font-size: 3rem;
+    height: 5rem;
+    padding: 0 2.5rem;
+  }
+  //
+  //OTHER
+  nav .button-collapse i {
+      font-size: 6rem;
+      padding-left: 2rem;
+  }
+  //
+  .header1 {
+    font-size: 10rem;
+  }
+  .header2 {
+    font-size: 5rem;
+  }
+  .subheader-index {
+    font-size: 3rem;
+  }
+  .condensed-light {
+    font-size: 2.5rem;
+  }
+  .parallax {
+    opacity: 0.80;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    width: 100%;
+  }
+  footer.page-footer {
+      visibility: hidden;
+  }
+  .nav-mobile {
+
+  }
+  .card .card-title {
+    font-size: 4rem;
+    width: 50%;
+  }
+  .card-content {
+    font-size: 2rem;
+  }
+  .tankChart {
+      height: 40rem;
+      width: 100%;
+      position: relative;
+  }
+  .inflowChart{
+    height: 40rem;
+    width: 100%;
+    position: relative;
+    font-size: 20rem;
+  }
+  .card.large {
+    height: 60rem;
+    width: 100%;
+  }
+  .page-header {
+    font-size: 8rem;
+  }
+  .sub-header {
+    font-size: 5rem;
+    opacity: 80%;
+  }
+  .fbName {
+    font-size: 4rem;
+  }
+  .enterFarm {
+    font-size: 3.5rem;
+  }
+  .add-button {
+    font-size: 5rem;
+    line-height: 2rem;
+  }
+  .card-action {
+    font-size: 3.5rem;
+  }
+  .chartDetailsTitle {
+    font-size: 5rem;
+    font-weight: 500;
+  }
+  .chartDetails {
+    font-size: 4rem;
+  }
+  .chartTitle {
+    font-size: 8rem;
+    font-weight: 500;
+  }
+  .editButton {
+    font-size: 5rem;
+  }
+  .delete-button {
+    font-size: 5rem;
+  }
+  /* The Modal (background) */
+  .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 999; /* Sit on top */
+      left: 0;
+      top: 0;
+      bottom: 0;
+      min-width: 100%; /* Full width */
+      min-height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content/Box */
+  .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto; /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%; /* Could be more or less, depending on screen size */
+  }
+
+  /* The Close Button */
+  .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+  }
+
+  #chart {
+    max-height: 60rem;
+    height: 50rem;
+    font-size: 10rem;
+  }
+  .add-button {
+    font-weight: 300;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 5rem !important;
+  }
+  .btn-medium {
+    height: 5rem !important;
+    width: 5rem !important;
+  }
+  .alertsTitle {
+    font-size: 8rem !important;
+  }
+  .zoomBtn {
+    font-size: 1.5rem !important;
+  }
+  .btn, .btn-small {
+    padding: 1rem;
+    font-size: 1.5rem !important;
+  }
+  #bar-chart {
+    height: 40rem;
+  }
+  //Notification
+  .alertContent {
+    width: 92%;
+    margin-left: 2%;
+    margin-right: 2%;
+    float: left;
+    line-height: 5rem;
+    font-size: 3rem !important;
+  }
+  .alertClose {
+    width: 2%;
+    float: right;
+    height: inherit;
+  }
+  .alertBtnClose {
+    height: 100%;
+    border: none;
+    background: none;
+  }
+  .alertTitle {
+    text-align: center;
+    line-height: 5.5rem;
+    color: orange;
+    background-color: #2A3435;
+    font-size: 5rem;
+  }
+  .notification {
+    z-index: 1;
+    width: 4rem;
+    margin-bottom: -0.75rem;
+  }
+  span.badge {
+    z-index: 999;
+    color: white;
+  }
+  .notificationBadgeBackground {
+    z-index: 998;
+    width: 1rem;
+    height: 1rem;
+    background: orange;
+    -moz-border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    border-radius: 1rem;
+  }
+  .dropdown-content {
+    background-color: #F2F2F2;
+    margin: 0;
+    display: none;
+    width: 35rem !important; /* Changed this to accomodate content width */
+  	margin-left: -1px; /* Add this to keep dropdown in line with edge of navbar */
+    overflow: hidden;
+    opacity: 0;
+    position: absolute;
+    //white-space: nowrap;
+    z-index: 999;
+    will-change: width, height;
+  }
+  .breakWord {
+    width: inherit;
+    overflow-wrap: break-word;
+  }
+  .collection {
+  }
+  .collection-item {
+    height: 10rem;
+    font-size: 4rem;
+    line-height: 10rem;
+  }
+  .primary-content {
+    float: left;
+    height: 10rem;
+    font-size: 3.5rem;
+    line-height: 10rem;
+  }
+  .secondary-content {
+    float: right;
+    height: 10rem;
+    font-size: 3.5rem;
+    line-height: 10rem;
+  }
+  .btn-edit-account {
+    line-height: 5rem;
+    font-size: 2.3rem !important;
+  }
+  .account-title {
+    font-size: 7.5rem;
+  }
+  .btn-success {
+    font-size: 2.3rem !important;
+    line-height: 3rem;
+    margin-left: 30%;
+    width: 40%;
+  }
+  .highcharts-label .highcharts-data-label .highcharts-data-label-color-0 text {
+    width: 2000px;
+  }
+}
+//

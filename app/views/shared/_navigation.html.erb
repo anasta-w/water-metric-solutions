@@ -1,0 +1,16 @@
+<nav class="top-nav" style="">
+    <span class="nav-wrapper">
+      <%if logged_in?%>
+        <%= render 'shared/navbar/logged_in_nav'%>
+      <%else%>
+        <%= render 'shared/navbar/logged_out_nav'%>
+      <%end%>
+    </span>
+</nav>
+
+
+<script type="text/javascript">
+    $(".button-collapse").sideNav({
+      closeOnClick: true
+    });
+</script>

@@ -1,0 +1,50 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col m12">
+
+      <div class="login-panel panel panel-default">
+
+        <div class="panel-heading">
+          <h3 class="panel-title" style="text-align: center;">Please Sign In</h3>
+        </div>
+
+        <div class="panel-body">
+
+          <%=form_tag sessions_path, class: "form" do %>
+          <fieldset>
+
+            <div class="form-group">
+              <label for="email">EMAIL</label>
+              <%= email_field_tag 'email', nil, class: 'form-control'%>
+            </div>
+
+            <div class="form-group">
+              <label for="password">PASSWORD</label>
+              <%=password_field_tag 'password', nil, class: "form-control"%>
+            </div>
+
+            <div class="form-group">
+              <%= check_box_tag :remember_me%>
+              <%= label_tag :remember_me%>
+            </div>
+
+            <div class="form-group" style="text-align:center;color:#ff0000">
+              <p><strong><%if flash[:failure]%>
+                <%= render 'layouts/login_failure'%>
+              <%end%></strong></p>
+            </div>
+
+            <div class="row center">
+                <%= submit_tag "Login", class: "btn btn-lg btn-primary btn-bloc"%>
+            </div>
+
+          </fieldset>
+          <%end%>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- row -->
+
+</div> <!--container-->

@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-4">
+      <%=form_for [@farm_block, @inflow_meter] do |f|%>
+        <div class="input-group input-group-lg">
+          <%=f.label :name%>
+          <%=f.text_field :name, class: "form-control"%>
+        </div>
+
+        <div class="input-group input-group-lg">
+          <%=f.label :calibration_unit%>
+          <%=f.text_field :calibration_unit, class: "form-control"%>
+        </div>
+
+        <div class="input-group input-group-lg">
+          <%=f.submit "Submit", class: "btn btn-primary"%>
+        </div>
+      <%end%>
+    </div>
+  </div>
+</div>

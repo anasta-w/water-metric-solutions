@@ -1,0 +1,65 @@
+
+
+<div class="container">
+
+  <div class="row">
+    <h2>Add New Address</h2>
+  </div>
+
+
+  <%if @errors%>
+  <div class="row">
+    <ul>
+      <%@errors.each do |error, key, value|%>
+      <li><p class="bg-danger"><%="#{error} #{key[0]}"%></p></li>
+      <%end%>
+    </ul>
+  </div>
+  <%end%>
+  <div class="row">
+
+    <%=form_for [@user, @address], class: "form-vertical" do |f|%>
+    <div class="form-group">
+
+      <div class="input-group input-group-lg">
+        <%=f.label :address_one%>
+        <%=f.text_field :address_one, class: "form-control"%>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group input-group-lg">
+        <%=f.label :address_two%>
+        <%=f.text_field :address_two, class: "form-control"%>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group input-group-lg">
+        <%=f.label :state%>
+        <%=f.text_field :state, class: "form-control"%>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group input-group-lg">
+        <%=f.label :city%>
+        <%=f.text_field :city, class: "form-control"%>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group input-group-lg">
+        <%=f.label :post_code%>
+        <%=f.text_field :post_code, class: "form-control"%>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group input-group-lg">
+        <%=f.submit "Add Address", class: "btn btn-primary"%>
+      </div>
+    </div>
+    <%end%>
+  </div>
+</div>

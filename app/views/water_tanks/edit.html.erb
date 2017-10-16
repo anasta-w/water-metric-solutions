@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-4">
+      <%=form_for [@farm_block, @water_tank] do |f|%>
+        <div class="input-group input-group-lg">
+          <%=f.label :height%>
+          <%=f.text_field :height, class: "form-control"%>
+        </div>
+
+        <div class="input-group input-group-lg">
+          <%=f.label :capacity%>
+          <%=f.text_field :capacity, class: "form-control"%>
+        </div>
+
+        <div class="input-group input-group-lg">
+          <%=f.label :name%>
+          <%=f.text_field :name, class: "form-control"%>
+        </div>
+
+        <div class="input-group input-group-lg">
+          <%=f.submit "Submit", class: "btn btn-primary"%>
+        </div>
+      <%end%>
+    </div>
+  </div>
+</div>

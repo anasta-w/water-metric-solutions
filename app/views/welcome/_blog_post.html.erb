@@ -1,0 +1,32 @@
+<!-- Blog Post START -->
+<div class="col s12 m10 offset-m1 l8 offset-l2">
+
+  <ul class="blog-post">
+
+    <!-- IMAGE -->
+        <li class="image-container">
+          <%= image_tag "#{locals[:image]}", class:"circle"%>
+        </li>
+    <!-- IMAGE END -->
+
+    <!-- CONTENT START -->
+      <li class="content-container">
+
+        <!-- Title of Blog Post -->
+        <h5 class="blog-title">
+          <a class="blog-title-link" href="#">
+            <%=locals[:title]%>
+          </a>
+        </h5>
+
+        <!-- Main Body of Blog post -->
+        <p class="blog-main">
+          <%= locals[:content]%>
+        </p>
+
+      </li>
+    <!-- CONTENT END -->
+
+  </ul>
+</div>
+<!-- Blog Post END -->

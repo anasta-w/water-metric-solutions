@@ -1,0 +1,37 @@
+
+<div class="container">
+  <div class="row">
+    <ul class="col-md-8">
+      <%@alerts.each do |alert|%>
+      <li><h5>Condition: <%=alert.condition%></h5></li>
+      <li>Value: <%=alert.value%></li>
+      <li>
+        <%=link_to edit_polymorphic_path(alert) do%>
+          Edit This Alert
+        <%end%>
+      </li>
+      <li>
+        <%=button_to('Delete', alert_path(alert), class:"btn btn-default", :method => 'delete')%>
+      </li>
+      <%end%>
+      <li>
+        <%if @alertable.is_a? WaterTank%>
+        <%=link_to new_water_tank_alert_path do%>
+          Add New Alert
+          <%end%>
+
+        <%elsif @alertable.is_a?(Inflow)%>
+          <%=link_to new_meter_alert_path do%>
+            Add New Alert
+            <%end%>
+
+          <%elsif @alertable.is_a?(Outflow)%>
+            <%=link_to new_meter_alert_path do%>
+              Add New Alert
+          <%end%>
+
+        <%end%>
+      </li>
+    </ul>
+  </div>
+</div>

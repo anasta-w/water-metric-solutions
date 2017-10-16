@@ -1,0 +1,134 @@
+
+<div class="container">
+  <div class="row">
+      <div class="center-align chartTitle">
+        <%=@inflow_meter.name%>
+        <%=link_to edit_inflow_meter_path do%>
+          <i class="material-icons" style="color: grey;"><span class="editButton">mode_edit</span></i>
+        <%end%>
+      </div>
+  </div>
+    
+    <div class="row">      
+      <div class="col s12 m12 l12 center-align">
+      <%if @inflow_meter.calibration_unit%>
+        <div class="chartDetailsTitle">Calibration unit:</div>
+        <div class="chartDetails"><%=@inflow_meter.calibration_unit%></span></div>
+        <%else%>
+        <div class="chartDetails">No Calibration Unit</div>
+        <%end%>
+      </div>
+    </div>    
+
+<div class="row">
+  <div class="col s12 m12 l12 center-align">
+  <%if @result['location']%>
+    <div class="chartDetailsTitle">Location:</div>
+    <div class="chartDetails"><%= @result['location']['value'] %></span></div>
+    <%else%>
+    <div class="chartDetails">Null</div>
+    <%end%>
+  </div>
+</div>
+
+
+    <div class="row">      
+      <div class="col s12 m12 l12 center-align">
+      <%if @result['station']%>
+        <div class="chartDetailsTitle">Station:</div>
+        <div class="chartDetails"><%= @result['station']['value'] %></span></div>
+        <%else%>
+        <div class="chartDetails">Null</div>
+        <%end%>
+      </div>
+    </div>
+    <div class="row">      
+      <div class="col s12 m12 l12 center-align">
+      <%if @result['avgSnr']%>
+        <div class="chartDetailsTitle">avgSnr:</div>
+        <div class="chartDetails"><%= @result['avgSnr']['value'] %></span></div>
+        <%else%>
+        <div class="chartDetails">Null</div>
+        <%end%>
+      </div>
+    </div>
+    <div class="row">      
+      <div class="col s12 m12 l12 center-align">
+      <%if @result['rssi']%>
+        <div class="chartDetailsTitle">rssi:</div>
+        <div class="chartDetails"><%= @result['rssi']['value'] %></span></div>
+        <%else%>
+        <div class="chartDetails">Null</div>
+        <%end%>
+      </div>
+    </div>
+    <div class="row">      
+      <div class="col s12 m12 l12 center-align">
+      <%if @result['pulse']%>
+        <div class="chartDetailsTitle">Pulse:</div>
+        <div class="chartDetails"><%= @result['pulse']['value'] %></span></div>
+        <%else%>
+        <div class="chartDetails">Null</div>
+        <%end%>
+      </div>
+    </div>
+    <div class="row">      
+      <div class="col s12 m12 l12 center-align">
+      <%if @result['battery']%>
+        <div class="chartDetailsTitle">Battery:</div>
+        <div class="chartDetails"><%= @result['battery']['value'] %></span></div>
+        <%else%>
+        <div class="chartDetails">Null</div>
+        <%end%>
+      </div>
+    </div>
+    <div class="row">      
+      <div class="col s12 m12 l12 center-align">
+      <%if @result['totalflow']%>
+        <div class="chartDetailsTitle">Totalflow:</div>
+        <div class="chartDetails"><%= @result['totalflow']['value'] %></span></div>
+        <%else%>
+        <div class="chartDetails">Null</div>
+        <%end%>
+      </div>
+    </div>
+    <br/>    
+
+    <%if @error%>
+      <div id="error-message">
+        <%= @error[:message] %>
+      </div>
+    <%end%>
+
+    <!-- Chart -->
+    <div class="row">
+      <div id="chart"></div>
+    </div>
+
+    <br>
+
+    <div class="row">
+      Daily Consent
+      <div id="bar-chart"></div>
+    </div>
+
+    <%=button_to(inflow_meter_path(@inflow_meter), :method => 'delete', :class => "deleteButton") do%><i class="material-icons" style="font-size: 30px; color: red;"><span class="delete-button">delete</span></i><%end%>
+
+    <h3 class="alertsTitle">
+      Alerts
+    </h3>
+
+    <div class="row">
+
+      <%if @inflow_meter.alerts%>
+        <%@inflow_meter.alerts.each do |alert|%>
+          <%=render 'alerts/partials/card', locals: {alert: alert}%>
+        <%end%>
+      <%end%>
+
+    </div>
+
+    <%=link_to new_inflow_meter_alert_path(@inflow_meter) do%>
+      <input class="btn btn-default" type="submit" value="Add New Alert">
+    <%end%>
+</div>

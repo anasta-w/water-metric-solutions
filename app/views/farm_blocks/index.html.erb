@@ -1,0 +1,38 @@
+
+<div class="container">
+
+
+<div class="page-header"><strong>Dashboard</strong></div>
+<div class="sub-header">Your Farm Blocks   <%=link_to new_user_farm_block_path(@user), class: "btn-floating btn-medium waves-effect waves-light orange" do%>
+  <div class="add-button">+</div>
+<%end%></div>
+
+<div class="row">
+
+  <%@farm_blocks.each do |fb|%>
+  <div class="col s9 l3 m12">
+    <div class="card medium z-depth-2">
+      <div class="card-image waves-effect waves-block waves-light">
+
+        <% if fb.location%>
+        <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{fb.location.latitude},#{fb.location.longitude}&markers=#{fb.location.latitude},#{fb.location.longitude}&zoom=12&size=640x400&key=AIzaSyA4BHW3txEdqfxzdTlPwaHsYRSZbfeIcd8",
+              class: 'img-fluid img-rounded', alt: "#{fb.name} on the map"%>
+          <!-- <div id="map" style='width: 800px; height: 400px;'></div> -->
+          <%else%>
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+        <%end%>
+
+      </div>
+
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4"><%=fb.name.capitalize%></span>
+        <%=link_to farm_block_path(fb) do%>
+          <div class="enterFarm">Access Farm</div>
+        <%end%>
+      </div>
+    </div>
+  </div>
+  <%end%>
+</div>
+
+</div>

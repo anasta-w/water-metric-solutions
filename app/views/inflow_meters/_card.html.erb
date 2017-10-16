@@ -1,0 +1,20 @@
+<div class="col s12 m12 l4">
+  <div class="card large darken-2 sticky-action">
+      <div class="card-content">
+          <div class="inflowChart" id="inflow-meter<%=locals[:index]%>"></div>
+
+          <span class="card-title activator grey-text text-darken-4"><%=locals[:meter].name%></span>
+          <span id="inflow-meter-data" class="card-title activator grey-text text-darken-4" style="align-content: center;"></span><br>          
+          Last Reading: <span id="inflow-meter-lastReading<%=locals[:index]%>"></span><br>
+          Status: <span id="inflow-meter-status<%=locals[:index]%>"></span>                
+      </div>
+
+      <div class="card-reveal grey lighten-3">
+        <span class="card-title grey-text text-darken-4">Close<i class="fa fa-times right"></i></span>
+      </div>
+
+      <div class="card-action" style="background: lightgrey;">
+        <%=link_to "See More", inflow_meter_path(locals[:meter].id)%>
+      </div>
+  </div>
+</div>

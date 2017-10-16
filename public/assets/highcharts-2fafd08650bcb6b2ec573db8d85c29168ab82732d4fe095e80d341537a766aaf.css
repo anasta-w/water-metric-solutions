@@ -1,0 +1,981 @@
+/* Colors for data series and points. */
+/* Chart background, point stroke for markers and columns etc, */
+/* Neutral colors, grayscale by default. The default colors are defined by mixing the background-color
+with neutral, with a weight corresponding to the number in the name. */
+/* Strong text. */
+/* Main text and some strokes. */
+/* Axis labels, axis title, connector fallback. */
+/* Credits text, export menu stroke. */
+/* Disabled texts, button strokes, crosshair etc. */
+/* Grid lines etc. */
+/* Minor grid lines etc. */
+/* Tooltip backgroud, button fills, map null points. */
+/* Colored, shades of blue by default */
+/* Drilldown clickable labels, color axis max color. */
+/* Selection marker, menu hover, button hover, chart border, navigator series. */
+/* Navigator mask fill. */
+/* Ticks and axis line. */
+/* Pressed button, color axis min color. */
+/* line 26, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  line-height: normal;
+  z-index: 0;
+  /* #1072 */
+  -webkit-tap-highlight-color: transparent;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+/* line 38, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-root text {
+  stroke-width: 0;
+}
+
+/* line 41, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-background {
+  fill: #ffffff;
+}
+
+/* line 44, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-plot-border, .highcharts-plot-background {
+  fill: none;
+}
+
+/* line 47, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-label-box {
+  fill: none;
+}
+
+/* line 50, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-button-box {
+  fill: inherit;
+}
+
+/* Titles */
+/* line 55, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-title {
+  fill: #333333;
+  font-size: 1.5em;
+}
+
+/* line 59, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-subtitle {
+  fill: #666666;
+}
+
+/* Axes */
+/* line 64, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-axis-line {
+  fill: none;
+  stroke: #ccd6eb;
+}
+
+/* line 68, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-yaxis .highcharts-axis-line {
+  stroke-width: 0;
+}
+
+/* line 71, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-axis-title {
+  fill: #666666;
+}
+
+/* line 74, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-axis-labels {
+  fill: #666666;
+  cursor: default;
+  font-size: 100rem;
+}
+
+/* line 79, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-grid-line {
+  fill: none;
+  stroke: #e6e6e6;
+  stroke-width: 0;
+}
+
+/* line 84, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-xaxis-grid .highcharts-grid-line {
+  stroke-width: 0;
+}
+
+/* line 87, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-tick {
+  stroke: #ccd6eb;
+}
+
+/* line 90, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-yaxis .highcharts-tick {
+  stroke-width: 0;
+}
+
+/* line 93, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-minor-grid-line {
+  stroke: #f2f2f2;
+  stroke-width: 0;
+}
+
+/* line 97, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-crosshair-thin {
+  stroke-width: 1px;
+  stroke: #cccccc;
+}
+
+/* line 101, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-crosshair-category {
+  stroke: #ccd6eb;
+  stroke-opacity: 0.25;
+}
+
+/* Credits */
+/* line 108, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-credits {
+  cursor: pointer;
+  fill: #999999;
+  font-size: 0.7em;
+  transition: fill 250ms, font-size 250ms;
+}
+
+/* line 114, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-credits:hover {
+  fill: black;
+  font-size: 1em;
+}
+
+/* Tooltip */
+/* line 120, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-tooltip {
+  cursor: default;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: stroke 150ms;
+}
+
+/* line 126, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-tooltip text {
+  fill: #333333;
+}
+
+/* line 129, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-tooltip .highcharts-header {
+  font-size: 100.85em;
+}
+
+/* line 132, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-tooltip-box {
+  stroke-width: 1px;
+  fill: #f7f7f7;
+  fill-opacity: 0.85;
+}
+
+/* line 138, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-selection-marker {
+  fill: #335cad;
+  fill-opacity: 0.25;
+}
+
+/* line 143, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-graph {
+  fill: none;
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* line 149, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-state-hover .highcharts-graph {
+  stroke-width: 3;
+}
+
+/* line 152, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-state-hover path {
+  transition: stroke-width 50;
+  /* quick in */
+}
+
+/* line 155, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-state-normal path {
+  transition: stroke-width 250ms;
+  /* slow out */
+}
+
+/* Legend hover affects points and series */
+/* line 160, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+g.highcharts-series, .highcharts-point {
+  transition: opacity 250ms;
+}
+
+/* line 163, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-legend-series-active g.highcharts-series:not(.highcharts-series-hover),
+.highcharts-legend-point-active .highcharts-point:not(.highcharts-point-hover) {
+  opacity: 0.2;
+}
+
+/* Series options */
+/* Default colors */
+/* line 173, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-color-0 {
+  fill: #7cb5ec;
+  stroke: #7cb5ec;
+}
+
+/* line 173, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-color-1 {
+  fill: #434348;
+  stroke: #434348;
+}
+
+/* line 173, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-color-2 {
+  fill: #90ed7d;
+  stroke: #90ed7d;
+}
+
+/* line 173, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-color-3 {
+  fill: #f7a35c;
+  stroke: #f7a35c;
+}
+
+/* line 173, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-color-4 {
+  fill: #8085e9;
+  stroke: #8085e9;
+}
+
+/* line 173, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-color-5 {
+  fill: #f15c80;
+  stroke: #f15c80;
+}
+
+/* line 173, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-color-6 {
+  fill: #e4d354;
+  stroke: #e4d354;
+}
+
+/* line 173, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-color-7 {
+  fill: #2b908f;
+  stroke: #2b908f;
+}
+
+/* line 173, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-color-8 {
+  fill: #f45b5b;
+  stroke: #f45b5b;
+}
+
+/* line 173, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-color-9 {
+  fill: #91e8e1;
+  stroke: #91e8e1;
+}
+
+/* line 179, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-area {
+  fill-opacity: 0.75;
+  stroke-width: 0;
+}
+
+/* line 183, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-markers {
+  stroke-width: 1px;
+  stroke: #ffffff;
+}
+
+/* line 187, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-point {
+  stroke-width: 1px;
+}
+
+/* line 190, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-dense-data .highcharts-point {
+  stroke-width: 0;
+}
+
+/* line 194, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-data-label {
+  font-weight: bold;
+}
+
+/* line 197, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-data-label-box {
+  fill: none;
+  stroke-width: 0;
+}
+
+/* line 201, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-data-label text {
+  fill: #333333;
+}
+
+/* line 204, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-data-label-connector {
+  fill: none;
+}
+
+/* line 207, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-halo {
+  fill-opacity: 0.25;
+  stroke-width: 0;
+}
+
+/* line 211, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-point-select {
+  fill: #cccccc;
+  stroke: #000000;
+}
+
+/* line 215, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-column-series .highcharts-point {
+  stroke: #ffffff;
+  transition: fill-opacity 250ms;
+}
+
+/* line 219, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-column-series .highcharts-point-hover {
+  fill-opacity: 0.75;
+  transition: fill-opacity 50ms;
+}
+
+/* line 223, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-pie-series .highcharts-point {
+  stroke-linejoin: round;
+  stroke: #ffffff;
+}
+
+/* line 227, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-pie-series .highcharts-point-hover {
+  fill-opacity: 0.75;
+  transition: fill-opacity 50ms;
+}
+
+/* line 231, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-pie-series .highcharts-point-select {
+  fill: inherit;
+  stroke: inherit;
+}
+
+/* line 235, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-funnel-series .highcharts-point {
+  stroke-linejoin: round;
+  stroke: #ffffff;
+}
+
+/* line 239, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-funnel-series .highcharts-point-hover {
+  fill-opacity: 0.75;
+  transition: fill-opacity 50ms;
+}
+
+/* line 243, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-funnel-series .highcharts-point-select {
+  fill: inherit;
+  stroke: inherit;
+}
+
+/* line 247, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-pyramid-series .highcharts-point {
+  stroke-linejoin: round;
+  stroke: #ffffff;
+}
+
+/* line 251, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-pyramid-series .highcharts-point-hover {
+  fill-opacity: 0.75;
+  transition: fill-opacity 50ms;
+}
+
+/* line 255, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-pyramid-series .highcharts-point-select {
+  fill: inherit;
+  stroke: inherit;
+}
+
+/* line 259, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-solidgauge-series .highcharts-point {
+  stroke-width: 0;
+}
+
+/* line 262, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-treemap-series .highcharts-point {
+  stroke-width: 1px;
+  stroke: #e6e6e6;
+  transition: stroke 250ms, fill 250ms, fill-opacity 250ms;
+}
+
+/* line 267, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-treemap-series .highcharts-point-hover {
+  stroke: #999999;
+  transition: stroke 25ms, fill 25ms, fill-opacity 25ms;
+}
+
+/* line 272, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-treemap-series .highcharts-above-level {
+  display: none;
+}
+
+/* line 275, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-treemap-series .highcharts-internal-node {
+  fill: none;
+}
+
+/* line 278, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-treemap-series .highcharts-internal-node-interactive {
+  fill-opacity: 0.15;
+  cursor: pointer;
+}
+
+/* line 282, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-treemap-series .highcharts-internal-node-interactive:hover {
+  fill-opacity: 0.75;
+}
+
+/* Legend */
+/* line 289, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-legend-box {
+  fill: none;
+  stroke-width: 0;
+}
+
+/* line 293, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-legend-item text {
+  fill: #333333;
+  font-weight: bold;
+  cursor: pointer;
+  stroke-width: 0;
+}
+
+/* line 299, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-legend-item:hover text {
+  fill: #000000;
+}
+
+/* line 302, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-legend-item-hidden * {
+  fill: #cccccc !important;
+  stroke: #cccccc !important;
+  transition: fill 250ms;
+}
+
+/* line 307, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-legend-nav-active {
+  fill: #003399;
+  cursor: pointer;
+}
+
+/* line 311, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-legend-nav-inactive {
+  fill: #cccccc;
+}
+
+/* line 314, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-legend-title-box {
+  fill: none;
+  stroke-width: 0;
+}
+
+/* Loading */
+/* line 320, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-loading {
+  position: absolute;
+  background-color: #ffffff;
+  opacity: 0.5;
+  text-align: center;
+  z-index: 10;
+  transition: opacity 250ms;
+}
+
+/* line 328, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-loading-hidden {
+  height: 0 !important;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 250ms, height 250ms step-end;
+}
+
+/* line 334, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-loading-inner {
+  font-weight: bold;
+  position: relative;
+  top: 45%;
+}
+
+/* Plot bands and polar pane backgrounds */
+/* line 347, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-plot-line {
+  fill: none;
+  stroke: #999999;
+  stroke-width: 1px;
+}
+
+/* Highcharts More */
+/* line 354, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-boxplot-box {
+  fill: #ffffff;
+}
+
+/* line 357, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-boxplot-median {
+  stroke-width: 2px;
+}
+
+/* line 360, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-bubble-series .highcharts-point {
+  fill-opacity: 0.5;
+}
+
+/* line 363, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-errorbar-series .highcharts-point {
+  stroke: #000000;
+}
+
+/* line 366, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-gauge-series .highcharts-data-label-box {
+  stroke: #cccccc;
+  stroke-width: 1px;
+}
+
+/* line 370, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-gauge-series .highcharts-dial {
+  fill: #000000;
+}
+
+/* line 373, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-polygon-series .highcharts-graph {
+  fill: inherit;
+  stroke-width: 0;
+}
+
+/* line 377, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-waterfall-series .highcharts-graph {
+  stroke: #333333;
+  stroke-dasharray: 1, 3;
+}
+
+/* Highstock */
+/* line 383, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-navigator-mask {
+  fill: #6685c2;
+  /* navigator.maskFill option */
+  fill-opacity: 0.25;
+}
+
+/* line 387, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-navigator-mask-inside {
+  fill: #6685c2;
+  /* navigator.maskFill option */
+  fill-opacity: 0.25;
+  cursor: ew-resize;
+}
+
+/* line 392, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-navigator-outline {
+  stroke: #cccccc;
+  fill: none;
+}
+
+/* line 396, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-navigator-handle {
+  stroke: #cccccc;
+  fill: #f2f2f2;
+  cursor: ew-resize;
+}
+
+/* line 401, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-navigator-series {
+  fill: #335cad;
+  stroke: #335cad;
+}
+
+/* line 405, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-navigator-series .highcharts-graph {
+  stroke-width: 1px;
+}
+
+/* line 408, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-navigator-series .highcharts-area {
+  fill-opacity: 0.05;
+}
+
+/* line 411, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-navigator-xaxis .highcharts-axis-line {
+  stroke-width: 0;
+}
+
+/* line 414, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-navigator-xaxis .highcharts-grid-line {
+  stroke-width: 0px;
+  stroke: #e6e6e6;
+}
+
+/* line 418, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-navigator-xaxis.highcharts-axis-labels {
+  fill: #999999;
+}
+
+/* line 421, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-navigator-yaxis .highcharts-grid-line {
+  stroke-width: 0;
+}
+
+/* line 424, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-scrollbar-thumb {
+  fill: #cccccc;
+  stroke: #cccccc;
+  stroke-width: 1px;
+}
+
+/* line 429, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-scrollbar-button {
+  fill: #e6e6e6;
+  stroke: #cccccc;
+  stroke-width: 1px;
+}
+
+/* line 434, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-scrollbar-arrow {
+  fill: #666666;
+}
+
+/* line 437, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-scrollbar-rifles {
+  stroke: #666666;
+  stroke-width: 1px;
+}
+
+/* line 441, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-scrollbar-track {
+  fill: #f2f2f2;
+  stroke: #f2f2f2;
+  stroke-width: 1px;
+}
+
+/* line 446, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-button {
+  fill: #f7f7f7;
+  stroke: #cccccc;
+  cursor: default;
+  stroke-width: 1px;
+  transition: fill 250ms;
+}
+
+/* line 453, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-button text {
+  fill: #333333;
+}
+
+/* line 456, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-button-hover {
+  transition: fill 0ms;
+  fill: #e6e6e6;
+  stroke: #333333;
+}
+
+/* line 461, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-button-pressed {
+  font-weight: bold;
+  fill: #e6ebf5;
+  stroke: #335cad;
+}
+
+/* line 466, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-button-disabled text {
+  fill: #cccccc;
+}
+
+/* line 469, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-range-selector-buttons .highcharts-button {
+  stroke-width: 0;
+}
+
+/* line 472, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-range-label rect {
+  fill: none;
+}
+
+/* line 475, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-range-label text {
+  fill: #666666;
+}
+
+/* line 478, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-range-input rect {
+  fill: none;
+}
+
+/* line 481, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-range-input text {
+  fill: #333333;
+}
+
+/* line 484, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+input.highcharts-range-selector {
+  position: absolute;
+  border: 0;
+  width: 1px;
+  /* Chrome needs a pixel to see it */
+  height: 1px;
+  padding: 0;
+  text-align: center;
+  left: -9em;
+  /* #4798 */
+}
+
+/* line 493, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-crosshair-label text {
+  fill: #ffffff;
+  font-size: 1.1em;
+}
+
+/* line 497, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-crosshair-label .highcharts-label-box {
+  fill: inherit;
+}
+
+/* line 502, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-candlestick-series .highcharts-point {
+  stroke: #000000;
+  stroke-width: 1px;
+}
+
+/* line 506, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-candlestick-series .highcharts-point-up {
+  fill: #ffffff;
+}
+
+/* line 509, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-ohlc-series .highcharts-point-hover {
+  stroke-width: 3px;
+}
+
+/* line 512, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-flags-series .highcharts-point {
+  stroke: #999999;
+  fill: #ffffff;
+}
+
+/* line 516, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-flags-series .highcharts-point-hover {
+  stroke: #000000;
+  fill: #ccd6eb;
+}
+
+/* line 520, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-flags-series .highcharts-point text {
+  fill: #000000;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+/* Highmaps */
+/* line 527, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-map-series .highcharts-point {
+  transition: fill 500ms, fill-opacity 500ms, stroke-width 250ms;
+  stroke: #cccccc;
+}
+
+/* line 531, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-map-series .highcharts-point-hover {
+  transition: fill 0ms, fill-opacity 0ms;
+  fill-opacity: 0.5;
+  stroke-width: 2px;
+}
+
+/* line 536, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-mapline-series .highcharts-point {
+  fill: none;
+}
+
+/* line 539, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-heatmap-series .highcharts-point {
+  stroke-width: 0;
+}
+
+/* line 542, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-map-navigation {
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* line 547, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-coloraxis {
+  stroke-width: 0;
+}
+
+/* line 550, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-coloraxis-marker {
+  fill: #999999;
+}
+
+/* line 553, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-null-point {
+  fill: #f7f7f7;
+}
+
+/* 3d charts */
+/* line 558, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-3d-frame {
+  fill: transparent;
+}
+
+/* line 561, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-column-series .highcharts-point {
+  stroke: inherit;
+  /* use point color */
+}
+
+/* Exporting module */
+/* line 566, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-contextbutton {
+  fill: #ffffff;
+  /* needed to capture hover */
+  stroke: none;
+  stroke-linecap: round;
+}
+
+/* line 571, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-contextbutton:hover {
+  fill: #e6e6e6;
+  stroke: #e6e6e6;
+}
+
+/* line 575, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-button-symbol {
+  stroke: #666666;
+  stroke-width: 3px;
+}
+
+/* line 579, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-menu {
+  border: 1px solid #999999;
+  background: #ffffff;
+  padding: 5px 0;
+  box-shadow: 3px 3px 10px #888;
+}
+
+/* line 585, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-menu-item {
+  padding: 0.5em 1em;
+  background: none;
+  color: #333333;
+  cursor: pointer;
+  transition: background 250ms, color 250ms;
+}
+
+/* line 592, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-menu-item:hover {
+  background: #335cad;
+  color: #ffffff;
+}
+
+/* Drilldown module */
+/* line 598, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-drilldown-point {
+  cursor: pointer;
+}
+
+/* line 601, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-drilldown-data-label text, .highcharts-drilldown-axis-label {
+  cursor: pointer;
+  fill: #003399;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* No-data module */
+/* line 609, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+.highcharts-no-data text {
+  font-weight: bold;
+  font-size: 12px;
+  fill: #666666;
+}
+
+@media only screen and (max-device-width: 480px) {
+  /* line 618, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+  .highcharts-data-label-box {
+    fill: none;
+    stroke-width: 0;
+    display: none;
+  }
+
+  /* line 623, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+  .highcharts-data-label text {
+    fill: #333333;
+    line-height: 100rem !important;
+    font-size: 5rem !important;
+    text-align: center !important;
+    fill: black !important;
+  }
+
+  /* line 630, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+  .highcharts-yaxis-labels text {
+    font-size: 2rem !important;
+  }
+
+  /* line 633, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+  .highcharts-xaxis-labels text {
+    font-size: 1.5rem !important;
+  }
+
+  /* line 636, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+  .highcharts-text-outline {
+    stroke-width: 0.75rem;
+    stroke: lightgrey;
+  }
+
+  /* line 642, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+  .highcharts-gauge-series .highcharts-dial {
+    fill: #000000;
+    opacity: 0.5 !important;
+    stroke-width: 7.5 !important;
+    stroke: black !important;
+    width: 10 !important;
+  }
+
+  /* line 649, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+  .dataLabels.highcharts-data-label text {
+    line-height: 100rem;
+  }
+
+  /* line 654, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+  .highcharts-range-selector-buttons {
+    stroke-width: 0;
+    display: none;
+  }
+
+  /* line 658, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+  .highcharts-input-group {
+    display: none;
+  }
+
+  /* line 661, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+  .highcharts-tooltip {
+    height: 10rem;
+    font-size: 2.5rem !important;
+  }
+
+  /* line 665, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+  .highcharts-tooltip-box {
+    width: 10rem !important;
+  }
+
+  /* line 668, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+  .highcharts-tooltip text tspan {
+    font-size: 2.5rem !important;
+    transform: translate(100px, 35px) !important;
+  }
+
+  /* line 672, /Volumes/DATA/PROJECTS/Fiverr/k-node/app/assets/stylesheets/highcharts.scss */
+  .highcharts-title {
+    font-size: 3.5em !important;
+  }
+}

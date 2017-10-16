@@ -1,0 +1,61 @@
+
+<div class="container">
+  <div class="account-title center-align">My Account</div>
+  <div class="row">
+    <div class="col l6 offset-l3 m12 s12">
+
+      <ul class="collection">
+        <li class="collection-item">
+          <div class="primary-content">
+            First Name:
+          </div>
+          <div class="secondary-content black-text"><%=@user.first_name%></div>
+        </li>
+        <li class="collection-item">
+          <div class="primary-content">
+            Last Name:
+          </div>
+          <div class="secondary-content black-text">
+            <%=@user.last_name%>
+          </div></li>
+        <li class="collection-item">
+          <div class="primary-content">
+            Email:
+          </div>
+          <div class="secondary-content black-text">
+              <%=@user.email%>
+          </div>
+          </li>
+        <li class="collection-item">
+          <div class="primary-content">
+            Phone:
+          </div>
+          <div class="secondary-content black-text">
+            <%=@user.phone%>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+    <!-- <%#if @user.address%>
+      <%#link_to address_path(@user) do%>
+        <div class="btn btn-primary btn-lg" role="button">View Address &raquo;</div>
+      <%#end%>
+    <%#else%>
+    <%#link_to new_user_address_path(@user) do%>
+      <div class="btn btn-primary btn-lg" role="button">Add Address &raquo;</div>
+    <%#end%>
+    <%#end%> -->
+
+    <div class="row">
+      <!-- <div class="col s12 m6 center-align push-l5 "> -->
+      <%=link_to edit_user_path do%>
+      <div class="col btn btn-edit-account l2 offset-l5 m4 offset-m4 s4 offset-s4 waves-effect waves-light" role="button">Edit Account &raquo;</div>
+      <%end%>
+      <!-- </div> -->
+    </div>
+  </div>
+
+
+</div>

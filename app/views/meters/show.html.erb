@@ -1,0 +1,66 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-xs-12 col-md-offset-5">
+      <h2><%=@meter.name%> | AAA</h2>
+    </div>    
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <ul class="list-inline">
+              <li><h4>Calibration unit:</h4></li>
+              <%if @meter.calibration_unit%>
+              <li><strong><%=@meter.calibration_unit%></strong></li>
+              <%else%>
+              <li><strong>No Calibration Unit</strong></li>
+              <%end%>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <ul class="list-inline">
+            <li><h4>Type:</h4></li>
+            <li><strong><%=@meter.type%></strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <ul class="list-inline">
+          <li><h4>Output:</h4></li>
+          <li><strong><%=@meter.output%></strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    </div>
+
+    <%=link_to edit_meter_path do%>
+      <input class="btn btn-default" type="submit" value="Edit Meter">
+    <%end%>
+
+    <%=button_to('Delete', meter_path(@meter), class:"btn btn-default", :method => 'delete')%>
+    
+    <%=render 'alerts/index'%>
+
+    <h3>
+      Alerts
+    </h3>
+
+    <%=link_to new_meter_alert_path(@meter) do%>
+      Add New Alert
+    <%end%>
+
+  </div>
+
+
+</div>
