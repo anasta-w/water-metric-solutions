@@ -137,8 +137,8 @@ class InflowMetersController < ApplicationController
     # Get state device info = Meter
     #================================================#
     begin
-      client = LosantRest::Client.new(auth_token: session[:losant_auth_token], url: "https://api.losant.com")
-      @result = client.device.get_composite_state( applicationId: ENV['LOSANT_APP_ID'], deviceId: '59b9ac8ebc9c9b0007659ade')
+      client = LosantRest::Client.new(auth_token: ENV['LOSANT_API_TOKEN'], url: "https://api.losant.com")
+      @result = client.device.get_composite_state( applicationId: ENV['LOSANT_APP_ID'], deviceId: @inflow_meter.device_EUI)
     rescue Exception => e
       @errors = e.to_s
     end

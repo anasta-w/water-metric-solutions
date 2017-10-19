@@ -31,7 +31,7 @@ class UsersController < ApplicationController
 
       urlApi =  "https://" + ENV['LOSANT_APP_ID'] + ".onlosant.com/users"
       response = HTTP.post(urlApi, :json => user_info)
-      if response.parse['token']
+      if response.parse['id']
         # Only save user to local DB, after saved on Losant
         @user.save
 
